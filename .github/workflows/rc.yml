@@ -10,5 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Execute command
-        run: |
-          echo Hello World RC!
+        run: echo Hello World RC!
