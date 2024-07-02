@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: test    
     steps:
       - name: Execute command
-        run: echo Hello World RC!
+        run: echo Hello World ${{ vars.Message}}!
