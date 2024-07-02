@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: test
     steps:
+      - uses: actions/checkout@v4
+      
       - name: Execute command
         run: echo Hello World ${{ vars.Message }}!
 

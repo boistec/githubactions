@@ -4,11 +4,17 @@ on:
   push:
     branches:
       - main
+  workflow_run:
+    workflows: ["Build and Deploy to Test"]
+    types:
+      - completed
 
 jobs:
   build:
     runs-on: ubuntu-latest
     environment: test    
     steps:
+      - uses: actions/checkout@v4
+
       - name: Execute command
-        run: echo Hello World ${{ vars.Message}}!
+        run: echo Hello World ${{ vars.Message}}
